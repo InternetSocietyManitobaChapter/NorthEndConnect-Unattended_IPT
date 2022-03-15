@@ -1,0 +1,9 @@
+dist
+build
+__pycache__
+main.spec
+server.spec
+log.log
+settings.ini
+server_logs
+logs
