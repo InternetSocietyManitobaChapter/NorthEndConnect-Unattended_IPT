@@ -3,7 +3,9 @@ build
 __pycache__
 main.spec
 server.spec
+updater.spec
 log.log
 settings.ini
 server_logs
 logs
+UPT.exe

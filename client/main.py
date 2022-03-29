@@ -16,6 +16,7 @@
 
 # Top level variables to change depending on requirements
 VERSION="1"
+
 SERVER_ADDRESS="localhost"
 SERVER_PORT=81
 WAIT_TIME=300
@@ -84,6 +85,11 @@ else:
 def performanceTest():
     optedIn = config['settings']['allow']
     if optedIn == "YES":
+        config.set('settings','version', VERSION)
+
+        with open(r"settings.ini", 'w') as configfile:
+                config.write(configfile)
+
         # Setup a headless Edge driver
         service = Service(EdgeChromiumDriverManager().install())
         service.creationflags = CREATE_NO_WINDOW

@@ -6,8 +6,8 @@ It will also send the version, computer name, and ip address to a specified serv
 
 # How the program works
 There are two Python files for this program.  
-Main.py is for the client  
-Server.py is for the server  
+updater.py and main.py is for the client
+Server.py is for the server
 
 Main.py has variables for SERVER_ADDRESS and SERVER_PORT which need to be configured to match the Server.py host  
 Server.py has the same SERVER_ADDRESS and SERVER_PORT variables, which need to be assigned  
@@ -15,8 +15,11 @@ Server.py has the same SERVER_ADDRESS and SERVER_PORT variables, which need to b
 Once those variables are set go into the client folder, and server folder respectively and run the following commands
 ```
 Client Folder:  
-pyinstaller --noconsole --onefile ./main.py  
+pyinstaller --noconsole --onefile ./main.py
   
+Updater Folder:
+pyinstaller --noconsole --onefile ./updater.py  
+
 Server Folder:  
 pyinstaller ./server.py
 ```
@@ -34,6 +37,6 @@ Open the settings.ini in a notepad
 Change "allow = YES" to "allow = NO"  
 
 # Requirements to update the program
-Windows  
+Windows 10 | Testing and using the Updater & Performance Test
 Python 3.10  
 PyInstaller  
