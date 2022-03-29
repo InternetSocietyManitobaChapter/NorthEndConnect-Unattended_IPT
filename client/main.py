@@ -17,8 +17,9 @@
 # Top level variables to change depending on requirements
 VERSION="1"
 
-SERVER_ADDRESS="localhost"
-SERVER_PORT=81
+TCP_IP="localhost"
+TCP_PORT=81
+
 WAIT_TIME=300
 
 # IMPORTS
@@ -172,7 +173,7 @@ logging.basicConfig(filename="log.log", level=logging.INFO)
 
 # Try to connect to the Internet Society server to log information
 try:
-    tcp_socket = socket.create_connection((SERVER_ADDRESS, SERVER_PORT))
+    tcp_socket = socket.create_connection((TCP_IP, TCP_PORT))
     try:
         hostname = socket.gethostname()
         ipv4 = requests.get('http://ip.42.pl/raw').text

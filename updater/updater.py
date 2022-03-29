@@ -15,21 +15,16 @@
 # Supported with fundamental from the Internet Society Manitoba Chapter Inc. (www.internetsocietymanitoba.ca) 
 
 # Top level variables to change depending on requirements
-SERVER_ADDRESS="localhost"
-SERVER_PORT=81
-WAIT_TIME=300
+TCP_IP = 'localhost'
+TCP_PORT = 81
+BUFFER_SIZE = 1024
 
 # IMPORTS
 import subprocess
 import json
 import socket
-
 from configparser import ConfigParser
 # END OF IMPORT
-
-TCP_IP = 'localhost'
-TCP_PORT = 81
-BUFFER_SIZE = 1024
 
 # Initialize the config parser    
 config = ConfigParser()
