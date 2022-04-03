@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip install Requests Pygments
 
 # Copy our script into the container
-COPY server.py /server.py
+COPY ../server.py /server.py
 
 # Run the script when the image is run
 ENTRYPOINT ["python3", "/server.py"]
