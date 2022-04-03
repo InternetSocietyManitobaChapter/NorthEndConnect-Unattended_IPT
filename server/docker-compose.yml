@@ -1,6 +1,16 @@
 version: "3"
     
 services:
+
+  ubuntu-simple:
+    container_name: ubuntu-simple
+    labels:
+      description: Host server for Custom Scripts - Test
+      name: Ubuntu Server - Test
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile-Ubuntu-Simple
+
   ubuntu:
     container_name: ubuntu
     labels:
