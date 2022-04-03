@@ -3,7 +3,7 @@ version: "3"
 services:
   ubuntu:
     build:
-      contect: .
+      context: .
       dockerfile: dockerfiles/Dockerfile-Ubuntu
     ports:
       - "1024:1024"
