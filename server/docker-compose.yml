@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+  ubuntu:
+    build:
+    contect: .
+    dockerfile: dockerfiles/Dockerfile-Ubuntu
+   ports:
+    - "1024:1024"
+   volumes:
+    - /
   jupyter:
     build:
       context: .
@@ -10,7 +18,7 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - ./:/home/connectin
+      - NorthEndConnect-Unattended_IPT:/NorthEndConnect-Unattended_IPT
   webserver:
     build:
       context: .
@@ -18,5 +26,5 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /ConnectedMB/server/serverfiles/www:/usr/share/nginx/html
+      - /NorthEndConnect-Unattended_IPT/server/www:/usr/share/nginx/html
    
