@@ -13,8 +13,6 @@ services:
     build:
       context: .
       dockerfile: dockerfiles/Dockerfile-jupyter
-    env_file:
-      - creds.env
     ports:
       - "8888:8888"
     volumes:
