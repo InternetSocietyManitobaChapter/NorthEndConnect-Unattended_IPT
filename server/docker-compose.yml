@@ -1,7 +1,11 @@
 version: "3"
-
+    
 services:
   ubuntu:
+    container_name: ubuntu
+    labels:
+      description: Host server for Custom Scripts
+      name: Ubuntu Server
     build:
       context: .
       dockerfile: dockerfiles/Dockerfile-Ubuntu
@@ -9,6 +13,7 @@ services:
       - "81:81"
     volumes:
       - /NorthEndConnect-Unattended_IPT/server:/home
+      
   jupyter:
     build:
       context: .
@@ -17,6 +22,7 @@ services:
       - "8888:8888"
     volumes:
       - /NorthEndConnect-Unattended_IPT:/etc/jupyter
+  
   webserver:
     build:
       context: .
