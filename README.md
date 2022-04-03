@@ -1,7 +1,7 @@
 # Unattended Performance Test
-This program will sit in "C:\Program Files\Unattended IPT" of imaged computers.  
+This program will sit in "C:\Program Files\Unattended IPT" of the imaged computers.  
 main.py will be turned into an exe using pyinstaller, with automatically generated settings and log files.  
-It performs an automated test to Cira's Mini Internet Performance Test (performance.cira.ca/mini)  
+It performs an automated test to the Canadian Internet Registration Authority (CIRA)'s Mini Internet Performance Test (performance.cira.ca/mini)  
 It will also send the version, computer name, and ip address to a specified server running Server.py  
 
 # How the program works
