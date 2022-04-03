@@ -11,7 +11,7 @@ Started 1 November 2021
 
 # The general phases are: 
 
-1) Preparing the equipment: a) find an appropriate project server; b) find one or more remote clients.
+1) Preparing the equipment: a) find an appropriate project server; b) add scripts to one or more remote clients.
 
 2) Flashing the base OS: The server and client will need a base operating system installed.
 
@@ -19,7 +19,7 @@ Started 1 November 2021
 
 4) Create a Git Hub account: To "fork" (copy) the existing project and explore software version control.
 
-5) Install: To install the project software on the server which will also act as a repository for the client software.
+5) Install: To install the project software on the server.
 
 6) Docker up: Start the multiple virtual servers.
 
