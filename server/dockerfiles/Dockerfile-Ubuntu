@@ -1,46 +1,25 @@
+# Using the Ubuntu image (our OS)
 FROM ubuntu:20.04
 
-# Install.
-RUN \
-  apt-get update && \
-  apt-get -y dist-upgrade && \
-  apt-get install -y software-properties-common && \
-  add-apt-repository -y ppa:opencpu/opencpu-2.2 && \
-  apt-get update && \
-  apt-get install -y wget make devscripts apache2-dev apache2 libapreq2-dev r-base r-base-dev libapparmor-dev libcurl4-openssl-dev libprotobuf-dev protobuf-compiler libcairo2-dev xvfb xauth xfonts-base curl libssl-dev libxml2-dev libicu-dev pkg-config libssh2-1-dev locales apt-utils && \
-  useradd -ms /bin/bash builder
+# Update package manager (apt-get) 
+# and install (with the yes flag `-y`)
+# Python and Pip
+RUN apt-get update && apt-get install -y \
+    python3.8 \
+    python3-pip
 
-USER builder
+# Add a user.
+#RUN \
+#  apt-get update && \  
+#  useradd -ms /bin/bash isocmb
 
-RUN \
-  cd ~ && \
-  wget --quiet https://github.com/opencpu/opencpu-server/archive/v${BRANCH}.tar.gz && \
-  tar xzf v${BRANCH}.tar.gz && \
-  cd opencpu-server-${BRANCH} && \
-  dpkg-buildpackage -us -uc
+#USER isocmb
 
-USER root
+# Install our Python dependencies
+RUN pip install Requests Pygments
 
-RUN \
-  apt-get install -y libapache2-mod-r-base && \
-  dpkg -i /home/builder/opencpu-lib_*.deb && \
-  dpkg -i /home/builder/opencpu-server_*.deb
+# Copy our script into the container
+COPY server.py /server.py
 
-RUN \
-  apt-get install -y gdebi-core git sudo && \
-  wget --quiet https://download2.rstudio.org/server/bionic/amd64/rstudio-server-${RSTUDIO}-amd64.deb && \
-  gdebi --non-interactive rstudio-server-${RSTUDIO}-amd64.deb && \
-  rm -f rstudio-server-${RSTUDIO}-amd64.deb && \
-  echo "server-app-armor-enabled=0" >> /etc/rstudio/rserver.conf
-
-# Set opencpu password so that we can login
-RUN \
-  echo "opencpu:opencpu" | chpasswd
-
-# Apache ports
-EXPOSE 80
-EXPOSE 443
-EXPOSE 8004
-
-# Start non-daemonized webserver
-CMD /usr/lib/rstudio-server/bin/rserver && apachectl -DFOREGROUND
+# Run the script when the image is run
+ENTRYPOINT ["python3", "/server.py"]
