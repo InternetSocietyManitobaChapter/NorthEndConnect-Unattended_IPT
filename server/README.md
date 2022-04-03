@@ -84,7 +84,7 @@ i)	Go to your GitHub account in the web browser. Login. Go to Settings under the
 				# This is required to put the project files in the correct location
 
 		git clone git@github.com:JoelTempleman/ConnectedMB.git
-		cd /ConnectedMB
+		cd /NorthEndConnect-Unattended_IPT
 		chmod +x install_project.sh
 		./install_project.sh -y
 
