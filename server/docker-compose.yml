@@ -16,7 +16,7 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - NorthEndConnect-Unattended_IPT:/NorthEndConnect-Unattended_IPT
+      - NorthEndConnect-Unattended_IPT:/
   webserver:
     build:
       context: .
