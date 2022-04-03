@@ -3,12 +3,12 @@ version: "3"
 services:
   ubuntu:
     build:
-    contect: .
-    dockerfile: dockerfiles/Dockerfile-Ubuntu
-   ports:
-    - "1024:1024"
-   volumes:
-    - /
+      contect: .
+      dockerfile: dockerfiles/Dockerfile-Ubuntu
+    ports:
+      - "1024:1024"
+    volumes:
+      - /
   jupyter:
     build:
       context: .
