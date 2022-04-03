@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: dockerfiles/Dockerfile-Ubuntu
     ports:
-      - "1024:1024"
+      - "81:81"
     volumes:
       - /NorthEndConnect-Unattended_IPT/server:/home
   jupyter:
