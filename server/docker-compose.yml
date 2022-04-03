@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile-jupyter
+    env_file:
+      - creds.env
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/home/connectin
+  webserver:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile-webserver
+    ports:
+      - "80:80"
+    volumes:
+      - /ConnectedMB/server/serverfiles/www:/usr/share/nginx/html
+   
