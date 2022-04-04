@@ -22,7 +22,7 @@ RUN pip install Requests Pygments
 COPY /server.py /server.py
 
 # Run the script when the image is run
-#ENTRYPOINT ["python3", "/server.py"]
+# ENTRYPOINT ["python3", "/server.py"]
 
-#CMD ["/bin/bash"]
-#ENTRYPOINT ["/bin/sh"]
+# CMD ["/bin/bash"]
+# ENTRYPOINT ["/bin/sh"]
