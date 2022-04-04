@@ -6,6 +6,12 @@ import json
 import socket
 from threading import Thread
 from socketserver import ThreadingMixIn
+import logging
+
+logger = logging.getLogger()
+handler = logging.FileHandler('/home/logfile.log')
+logger.addHandler(handler)
+logger.error('Our First Log Message')
 
 TCP_IP = 'localhost'
 TCP_PORT = 81
