@@ -8,10 +8,18 @@ from threading import Thread
 from socketserver import ThreadingMixIn
 import logging
 
+#Creating and Configuring Logger
+Log_Format = "%(levelname)s %(asctime)s - %(message)s"
+
+logging.basicConfig(filename = "/home/logfile.log",
+                    filemode = "w",
+                    format = Log_Format, 
+                    level = logging.ERROR)
+
 logger = logging.getLogger()
-handler = logging.FileHandler('/home/logfile.log')
-logger.addHandler(handler)
-logger.error('Our First Log Message')
+
+#Testing our Logger
+logger.error("Our First Log Message")
 
 TCP_IP = 'localhost'
 TCP_PORT = 81
