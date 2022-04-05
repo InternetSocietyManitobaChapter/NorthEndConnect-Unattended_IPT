@@ -1,6 +1,6 @@
 print("Hello World")
-import time
-time.sleep(30) # Sleep for 3 seconds
+#import time
+#time.sleep(30) # Sleep for 3 seconds
 
 from asyncio.windows_events import NULL
 import os
@@ -12,7 +12,7 @@ from threading import Thread
 from socketserver import ThreadingMixIn
 import logging
 
-Creating and Configuring Logger
+#Creating and Configuring Logger
 Log_Format = "%(levelname)s %(asctime)s - %(message)s"
 
 logging.basicConfig(filename = "/home/logfile.log",
@@ -22,7 +22,7 @@ logging.basicConfig(filename = "/home/logfile.log",
 
 logger = logging.getLogger()
 
-Testing our Logger
+#Testing our Logger
 logger.error("Our First Log Message")
 
 TCP_IP = 'localhost'
