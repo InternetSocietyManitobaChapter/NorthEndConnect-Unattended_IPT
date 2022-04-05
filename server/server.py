@@ -2,35 +2,35 @@ print("Hello World")
 import time
 time.sleep(30) # Sleep for 3 seconds
 
-#from asyncio.windows_events import NULL
-#import os
-#import csv
-#import time
-#import json
-#import socket
-#from threading import Thread
-#from socketserver import ThreadingMixIn
-#import logging
+from asyncio.windows_events import NULL
+import os
+import csv
+import time
+import json
+import socket
+from threading import Thread
+from socketserver import ThreadingMixIn
+import logging
 
-#Creating and Configuring Logger
-#Log_Format = "%(levelname)s %(asctime)s - %(message)s"
+Creating and Configuring Logger
+Log_Format = "%(levelname)s %(asctime)s - %(message)s"
 
-#logging.basicConfig(filename = "/home/logfile.log",
-#                    filemode = "w",
-#                    format = Log_Format, 
-#                    level = logging.ERROR)
+logging.basicConfig(filename = "/home/logfile.log",
+                    filemode = "w",
+                    format = Log_Format, 
+                    level = logging.ERROR)
 
-#logger = logging.getLogger()
+logger = logging.getLogger()
 
-#Testing our Logger
-#logger.error("Our First Log Message")
+Testing our Logger
+logger.error("Our First Log Message")
 
-#TCP_IP = 'localhost'
-#TCP_PORT = 81
-#BUFFER_SIZE = 1024
+TCP_IP = 'localhost'
+TCP_PORT = 81
+BUFFER_SIZE = 1024
 
-#filename='UPT.exe'
-#VERSION="1"
+filename='UPT.exe'
+VERSION="1"
 
 #class ClientThread(Thread):
 
