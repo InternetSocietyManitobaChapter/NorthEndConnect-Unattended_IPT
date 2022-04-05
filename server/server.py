@@ -10,6 +10,11 @@ import json
 import socket
 from threading import Thread
 from socketserver import ThreadingMixIn
+
+#Added to try to fix error
+import _overlapped
+
+#Added in an attempt to log errors and debug
 import logging
 
 #Creating and Configuring Logger
