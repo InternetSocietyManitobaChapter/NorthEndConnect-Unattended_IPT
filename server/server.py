@@ -1,4 +1,6 @@
 print("Hello World")
+import time
+time.sleep(30) # Sleep for 3 seconds
 
 #from asyncio.windows_events import NULL
 #import os
