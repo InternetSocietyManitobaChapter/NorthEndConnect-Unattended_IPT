@@ -14,7 +14,7 @@ BUFFER_SIZE = 1024
 filename='UPT.exe'
 VERSION="1"
 
-#class ClientThread(Thread):
+class ClientThread(Thread):
 
     def __init__(self,ip,port,sock):
         Thread.__init__(self)
