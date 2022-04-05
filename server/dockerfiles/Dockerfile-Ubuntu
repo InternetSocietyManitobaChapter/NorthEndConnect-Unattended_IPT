@@ -24,6 +24,6 @@ RUN pip install Requests Pygments
 # Run the script when the image is run
 ENTRYPOINT ["python3", "/home/server.py"]
 
-CMD ["/bin/bash"]
+# CMD ["/bin/bash"]
 
 # ENTRYPOINT ["/bin/sh"]
