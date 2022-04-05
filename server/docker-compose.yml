@@ -14,6 +14,7 @@ services:
       - "81:81"
     volumes:
       - /NorthEndConnect-Unattended_IPT/server:/home
+    command: tail -f /dev/null
       
   jupyter:
     container_name: jupyter_server
