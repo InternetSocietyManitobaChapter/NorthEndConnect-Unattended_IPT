@@ -11,7 +11,7 @@ TCP_IP = 'localhost'
 TCP_PORT = 81
 BUFFER_SIZE = 1024
 
-filename='UPT.exe'
+filename='UPT.zip'
 VERSION="1"
 
 class ClientThread(Thread):
@@ -34,19 +34,19 @@ class ClientThread(Thread):
             hostname = json_object["hostname"]
             ipv4 = json_object["ipv4"]
             csvName = f'./server_logs/{time.strftime("%Y-%m-%d")}.csv'
+            if hostname != "":
+                if os.path.exists(csvName):
+                    with open(csvName, 'a', newline='') as file:
+                        writer = csv.writer(file)
+                        writer.writerow([version,hostname,ipv4])
+                else:
+                    if not os.path.exists('server_logs'):
+                        os.makedirs('server_logs')
 
-            if os.path.exists(csvName):
-                with open(csvName, 'a', newline='') as file:
-                    writer = csv.writer(file)
-                    writer.writerow([version,hostname,ipv4])
-            else:
-                if not os.path.exists('server_logs'):
-                    os.makedirs('server_logs')
-
-                with open(csvName, 'w', newline='') as file:
-                    writer = csv.writer(file)
-                    writer.writerow(json_object)
-                    writer.writerow([version,hostname,ipv4])
+                    with open(csvName, 'w', newline='') as file:
+                        writer = csv.writer(file)
+                        writer.writerow(json_object)
+                        writer.writerow([version,hostname,ipv4])
                     
             self.sock.send(b"DONE")
             self.sock.close()

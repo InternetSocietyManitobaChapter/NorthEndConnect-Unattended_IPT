@@ -20,9 +20,13 @@ TCP_PORT = 81
 BUFFER_SIZE = 1024
 
 # IMPORTS
+import os
+import shutil
+import time
 import subprocess
 import json
 import socket
+import zipfile
 from configparser import ConfigParser
 # END OF IMPORT
 
@@ -35,11 +39,16 @@ if not config.has_option('settings', 'version'):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((TCP_IP, TCP_PORT))
-        version = {'version': '0'}
+        version = {'version': "0",'hostname': "",'ipv4': ""}
         data = json.dumps(version)
         s.sendall(bytes(data, encoding="utf-8"))
 
-        with open('UPT.exe', 'wb') as f:
+        if(os.path.isdir('UPT')):
+            shutil.rmtree('UPT')
+
+        os.mkdir('UPT')
+
+        with open('UPT.zip', 'wb') as f:
             while True:
                 data = s.recv(BUFFER_SIZE)
                 if not data:
@@ -48,34 +57,47 @@ if not config.has_option('settings', 'version'):
                 f.write(data)
 
         s.close()
+        
+        with zipfile.ZipFile('UPT.zip', 'r') as zip_ref:
+            zip_ref.extractall('UPT')
+
         print('version unmatched')
-        subprocess.run([r"UPT.exe"])
+        subprocess.run([r"UPT/UPT.exe"])
     except:
-        print('Connection failed')
+        print('Connection failed w/o Settings')
 else:
     try:
         VERSION = config.get('settings', 'version')
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((TCP_IP, TCP_PORT))
-        version = {'version': VERSION}
+        version = {'version': VERSION,'hostname': "",'ipv4': ""}
         data = json.dumps(version)
         s.sendall(bytes(data, encoding="utf-8"))
 
         check = s.recv(1024)
 
         if check != b"DONE":
-            with open('UPT.exe', 'wb') as f:
+            if(os.path.isdir('UPT')):
+                shutil.rmtree('UPT')
+
+            os.mkdir('UPT')
+
+            with open('UPT.zip', 'wb') as f:
                 while True:
-                    #print('receiving data...')
                     data = s.recv(BUFFER_SIZE)
                     if not data:
                         f.close()
                         break
-                    # write data to a file
                     f.write(data)
 
-        s.close()
-        print('version match')
-        subprocess.run([r"UPT.exe"])
+            s.close()
+            
+            with zipfile.ZipFile('UPT.zip', 'r') as zip_ref:
+                zip_ref.extractall('UPT')
+
+            print('version unmatched')
+            subprocess.run([r"UPT/UPT.exe"])
+        else: 
+            subprocess.run([r"UPT/UPT.exe"])
     except:
-        print('Connection failed')
+        print('Connection failed w/ Settings')

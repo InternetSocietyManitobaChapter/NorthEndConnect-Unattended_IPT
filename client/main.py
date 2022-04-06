@@ -17,10 +17,10 @@
 # Top level variables to change depending on requirements
 VERSION="1"
 
-TCP_IP="localhost"
+TCP_IP = 'localhost'
 TCP_PORT=81
 
-WAIT_TIME=300
+WAIT_TIME=30
 
 # IMPORTS
 import sys
