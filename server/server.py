@@ -1,4 +1,3 @@
-#from asyncio.windows_events import NULL
 import os
 import csv
 import time
@@ -57,7 +56,6 @@ class ClientThread(Thread):
                 l = f.read(BUFFER_SIZE)
                 while (l):
                     self.sock.send(l)
-                    #print('Sent ',repr(l))
                     l = f.read(BUFFER_SIZE)
                 if not l:
                     f.close()
