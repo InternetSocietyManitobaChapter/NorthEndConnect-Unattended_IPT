@@ -15,7 +15,7 @@
 # Supported with fundamental from the Internet Society Manitoba Chapter Inc. (www.internetsocietymanitoba.ca) 
 
 # Top level variables to change depending on requirements
-VERSION="1"
+VERSION="2"
 
 TCP_IP = 'localhost'
 TCP_PORT=81

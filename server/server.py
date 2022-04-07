@@ -11,7 +11,7 @@ TCP_PORT = 81
 BUFFER_SIZE = 1024
 
 filename='UPT.zip'
-VERSION="1"
+VERSION="2"
 
 class ClientThread(Thread):
 

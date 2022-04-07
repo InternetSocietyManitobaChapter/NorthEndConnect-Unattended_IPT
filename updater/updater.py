@@ -28,7 +28,7 @@ import json
 import socket
 import zipfile
 from configparser import ConfigParser
-# END OF IMPORT
+# END OF IMPORT.
 
 # Initialize the config parser    
 config = ConfigParser()
