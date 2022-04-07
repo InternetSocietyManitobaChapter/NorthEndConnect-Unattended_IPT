@@ -36,6 +36,11 @@ Use in Linux, requires Python 3.10
 Change version, or update information as required in the server.py  
 Make sure UPT.zip is the most recently updated build of Main.py
 
+# Windows Task Scheduler
+Create a new basic task in Task Scheduler, on start up pointing at the Updater.exe file
+Open the properties of the task, and go to triggers
+Delay tasks for a random amount of time after start up
+
 # Licensing
 Copyright [2022] [Allen Padilla]
 
