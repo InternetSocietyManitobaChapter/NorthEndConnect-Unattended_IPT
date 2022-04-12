@@ -15,6 +15,13 @@ Python PIP
 Python Nuitka | https://github.com/Nuitka/Nuitka 
 Python PyInstaller | https://pyinstaller.readthedocs.io/en/stable/index.html  
   
+# Preparation
+Windows 10 Client Prep
+On a clean windows 10 installation, Python and Nuitka will need to be installed
+
+For the Stable version use the following command:
+python -m pip install -U nuitka
+
 # Basic Configuration Information
 Updater, Client, and Server python files have a TCP_IP and TCP_PORT that will need to be adjusted to the server that server.py resides on.  
 Main and Server python files have a version setting, you will need to adjust that if there are any updates required.  
