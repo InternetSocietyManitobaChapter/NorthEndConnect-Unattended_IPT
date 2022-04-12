@@ -6,8 +6,13 @@ Cira.py is the standalone performance test, and only the performance test.
 
 Main.py is the performance test, which also sends info to the server.
 
-Updater.py is the self updater for the main runner, which extracts the updated ZIP from the server.  
+Updater.py is the self updater for the main runner, which extracts the updated ZIP from the server.
+
 Server.py is the server itself, it will receive information to put into a server_logs folder, as well as send UPT.zip to clients that require an update.  
+
+# Paths
+The Win 10 client requires the following software in these paths: folder/files
+
 
 # Requirements
 Python 3.10  
@@ -16,11 +21,12 @@ Python Nuitka | https://github.com/Nuitka/Nuitka
 Python PyInstaller | https://pyinstaller.readthedocs.io/en/stable/index.html  
   
 # Preparation
-Windows 10 Client Prep
+
+# Windows 10 Client Prep
 On a clean windows 10 installation, Python and Nuitka will need to be installed
 
 For the Stable version use the following command (https://nuitka.net/doc/download.html):
-python -m pip install -U nuitka
+python3 -m pip install -U nuitka
 
 # Copy the project files:
 
