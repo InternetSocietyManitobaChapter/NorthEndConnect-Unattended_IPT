@@ -1,14 +1,16 @@
 # Unattended Performance Test
 This program was built to be used in the North End Connect Project of the Internet Society of Manitoba Chapter.
-It connects the computer to the Internet Society's server, as well as remotely triggering the Canadian Internet Registration Authority (CIRA)'s Mini Performance Test.
+It connects the computer to the Internet Society's server, as well as remotely triggering the Canadian Internet Registration Authority (CIRA)'s Mini Performance Test (part of the Internet Performance Test (IPT) https://performance.cira.ca/ or the low bandwidth version https://performance.cira.ca/mini/ ).
 
-Cira.py is the standalone performance test, and only the performance test.  
+There are 4 areas within this software. "Cira.py" works by itself and all it does is silently run CIRA's IPT from a Windows 10 client computer. The other option required parts 2, 3 & 4 running on the Win 10 clients, in partnership with a Ubuntu server avaialbe somewhere on the open internet.
 
-Main.py is the performance test, which also sends info to the server.
+  1) Cira.py is the standalone performance test, and only the performance test.  
 
-Updater.py is the self updater for the main runner, which extracts the updated ZIP from the server.
+  2) Main.py is the performance test, which also sends info to the server.
 
-Server.py is the server itself, it will receive information to put into a server_logs folder, as well as send UPT.zip to clients that require an update.  
+  3) Updater.py is the self updater for the main runner, which extracts the updated ZIP from the server.
+
+  4) Server.py is the server itself, it will receive information to put into a server_logs folder, as well as send UPT.zip to clients that require an update.  
 
 # Paths
 The Win 10 client requires the following software in these paths: folder/files
