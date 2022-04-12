@@ -1,9 +1,11 @@
 # Unattended Performance Test
-This program was built to be used in the Northend Project of the Internet Society of Manitoba Chapter.  
-It connects the computer to the Internet Society's server, as well as CIRA's Mini Performance Test.  
+This program was built to be used in the North End Connect Project of the Internet Society of Manitoba Chapter.
+It connects the computer to the Internet Society's server, as well as remotely triggering the Canadian Internet Registration Authority (CIRA)'s Mini Performance Test.
+
 Cira.py is the standalone performance test, and only the performance test.  
 
-Main.py is the performance test, which also sends info to the server.  
+Main.py is the performance test, which also sends info to the server.
+
 Updater.py is the self updater for the main runner, which extracts the updated ZIP from the server.  
 Server.py is the server itself, it will receive information to put into a server_logs folder, as well as send UPT.zip to clients that require an update.  
 
