@@ -6,7 +6,7 @@ There are 4 areas within this software. "Cira.py" works by itself and all it doe
 
   1) Cira.py is the standalone performance test, and only the performance test.  
 
-  2) Main.py is the performance test, which also sends info to the server.
+  2) Main.py is the same performance test as in 1) Cira.py above, and sends info to the server and.
 
   3) Updater.py is the self updater for the main runner, which extracts the updated ZIP from the server.
 
