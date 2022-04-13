@@ -17,10 +17,17 @@ The Win 10 client requires the following software in these paths: folder/files
 
 
 # Requirements
+
+On the Server:
 Python 3.10  
+
+On the Client:
 Python PIP  
 Python Nuitka | https://github.com/Nuitka/Nuitka 
 Python PyInstaller | https://pyinstaller.readthedocs.io/en/stable/index.html  
+requests
+selenium
+webdriver-manager
   
 # Preparation
 
@@ -29,9 +36,11 @@ On a clean windows 10 installation, Python and Nuitka will need to be installed
 
 For the Stable version use the following command (https://nuitka.net/doc/download.html):
 python3 -m pip install -U nuitka
+pip3 install requests
+pip3 install selenium
+pip3 install webdriver-manager
 
 # Copy the project files:
-
 
 # Basic Configuration Information
 Updater, Client, and Server python files have a TCP_IP and TCP_PORT that will need to be adjusted to the server that server.py resides on.  
