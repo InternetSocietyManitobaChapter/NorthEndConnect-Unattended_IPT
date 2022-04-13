@@ -48,17 +48,27 @@ from subprocess import CREATE_NO_WINDOW
 # END OF IMPORT
 
 # Language information
-en_CA = r'''This computer is set to run an anonymous internet speed test from the site https://performance.cira.ca/ when it starts up and then at random times. 
+en_CA = r'''This computer is set to run an internet speed test from the site https://performance.cira.ca/ when it starts up and then from time to time. No personal information is collected. 
 
-This test will not negatively impact your internet connection, does not consume significant data, and there is no cost to the user. 
+This test runs silently so you will not see anything happening. It will not affect your internet connection, it does not consume very much data, and there is no cost. 
 
-The purpose of this test is to provide researchers with an accurate and up to date status of the internet available to residents in your area and no personal information is collected. 
+The purpose of this test is to provide researchers with an accurate and up to date status of the internet available to residents in your area. 
 
-You may choose to opt-out of this service at any time by going to "C:\Program Files\Unattened IPT\settings.ini" and change "allow" from YES to NO and then saving the file. 
+You may choose to opt-out of this service at any time by going to "C:\Program Files\Unattened IPT\settings.ini" and change "allow" from YES to NO and then save the file. 
 
 For more information, read the Terms and Conditions of Use for the CIRA Internet Performance Test, and the M-Lab Privacy Policy.'''
 
-fr_CA = r'''Modalités et conditions d'utilisation (pour le test de performance Internet de CIRA )'''
+fr_CA = r'''Modalités et conditions d'utilisation (pour le test de performance Internet de CIRA )
+
+Cet ordinateur est paramétré pour effectuer un test de vitesse internet à partir du site https://performance.cira.ca/ au démarrage puis de temps à autre. Aucune donnée personnelle n'est collectée.
+
+Ce test s'exécute en mode silencieux afin que vous ne voyiez rien se produire. Cela n'affectera pas votre connexion Internet, il ne consomme pas beaucoup de données et il n'y a aucun coût.
+
+Le but de ce test est de fournir aux chercheurs un état précis et à jour de l'Internet disponible pour les résidents de votre région.
+
+Vous pouvez choisir de vous désinscrire de ce service à tout moment en accédant à "C:\Program Files\Unattened IPT\settings.ini" et en changeant "autoriser" de OUI à NON, puis en enregistrant le fichier.
+
+Pour plus d'informations, lisez les conditions d'utilisation du test de performance Internet CIRA et la politique de confidentialité de M-Lab.'''
 
 # Get the user's current Windows UI language
 windll = ctypes.windll.kernel32
@@ -192,9 +202,13 @@ if not config.has_option('settings', 'allow'):
     window = tkinter.Tk()
     answer = IntVar()
 
-    window.title('Internet Performance Survey')
-
-    # Change the window sizing depending on the language
+    # Change the Window Title based on the system language
+    if language == "fr":  
+        window.title('Enquête sur les performances internet')
+    else:
+        window.title('Internet Performance Survey')
+                 
+    # Change the window sizing depending on the system language
     if language == "fr":    
         window_width = 500
         window_height = 150
