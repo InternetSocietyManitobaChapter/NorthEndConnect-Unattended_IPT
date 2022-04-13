@@ -60,15 +60,15 @@ For more information, read the Terms and Conditions of Use for the CIRA Internet
 
 fr_CA = r'''Modalités et conditions d'utilisation (pour le test de performance Internet de CIRA )
 
-Cet ordinateur est paramétré pour effectuer un test de vitesse internet à partir du site https://performance.cira.ca/ au démarrage puis de temps à autre. Aucune donnée personnelle n'est collectée.
+Cet ordinateur commencera à exécuter un test de vitesse Internet du site web https://performance.cira.ca/ dès qu’il démarre et encore de temps en temps. Aucun renseignement personnel sera recueilli.
 
-Ce test s'exécute en mode silencieux afin que vous ne voyiez rien se produire. Cela n'affectera pas votre connexion Internet, il ne consomme pas beaucoup de données et il n'y a aucun coût.
+Ce test s'exécute en mode silencieux afin que vous ne voyiez rien se produire. Cela n'affectera pas votre connexion internet, il ne consomme pas beaucoup de données et il n'y a aucun coût.
 
-Le but de ce test est de fournir aux chercheurs un état précis et à jour de l'Internet disponible pour les résidents de votre région.
+Le but de ce test est de fournir aux chercheurs un état précis et à jour de l’internet disponible aux résidents de votre région.
 
-Vous pouvez choisir de vous désinscrire de ce service à tout moment en accédant à "C:\Program Files\Unattened IPT\settings.ini" et en changeant "autoriser" de OUI à NON, puis en enregistrant le fichier.
+Vous pourriez choisir de désactiver ce service à tout moment en allant à « C:\Program Files\Unattened IPT\settings.ini » et en changeant « allow » de YES à NO et ensuite sauvegardant le fichier.
 
-Pour plus d'informations, lisez les conditions d'utilisation du test de performance Internet CIRA et la politique de confidentialité de M-Lab.'''
+Pour plus d'informations, lisez les Conditions générales d’utilisation du test de performance Internet CIRA et la Politique de confidentialité de M-Lab.'''
 
 # Get the user's current Windows UI language
 windll = ctypes.windll.kernel32
