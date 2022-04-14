@@ -17,8 +17,15 @@
 # Top level variables to change depending on requirements
 VERSION="2"
 
-TCP_IP = 'localhost'
-TCP_PORT=81
+# TCP_IP = 'localhost'
+# TCP_PORT=81
+# Get server info from file outside of compiled code
+
+with open('server.ini') as server:
+    contents = server.readlines()
+    print(contents)
+    TCP_IP = contents.read(0)
+    TCP_PORT = contents.read(1)
 
 WAIT_TIME=30
 
