@@ -6,7 +6,7 @@ import socket
 from threading import Thread
 from socketserver import ThreadingMixIn
 
-TCP_IP = 'localhost'
+TCP_IP = "192.168.1.101"
 TCP_PORT = 81
 BUFFER_SIZE = 1024
 
