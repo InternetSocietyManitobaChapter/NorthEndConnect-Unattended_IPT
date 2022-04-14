@@ -10,7 +10,7 @@ services:
     build:
       context: .
       dockerfile: dockerfiles/Dockerfile-Ubuntu
-      network: host
+      network_mode: "host"
     ports:
       - "81:81"
     volumes:
