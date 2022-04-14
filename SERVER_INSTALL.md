@@ -88,7 +88,7 @@ i)	Go to your GitHub account in the web browser. Login. Go to Settings under the
 
 j)	The "install_project.sh" script will do a few things for you. 
 
-	a)	It does a "git pull" command which copies all the files in the Git Hub repository into the folder /ConnectedMB
+	a)	It does a "git pull" command which copies all the files in the Git Hub repository into the folder /NorthEndConnect-Unattended_IPT
 
 	b)	It copies the appropriate files into the /home/connectin. This includes the project configuration files and webpages. *(More about this later.)
 
