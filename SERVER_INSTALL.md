@@ -13,7 +13,7 @@ Started 1 November 2021
 
 1) Preparing the equipment: a) find an appropriate project server; b) add scripts to one or more remote clients.
 
-2) Flashing the base OS: The server and client will need a base operating system installed.
+2) Flashing the base OS: The server (Ubuntu) and client (Win 10) will need a base operating system installed.
 
 3) Creating a test network: To isolate this network from the local network, a router will be setup.
 
@@ -21,13 +21,11 @@ Started 1 November 2021
 
 5) Install: To install the project software on the server.
 
-6) Docker up: Start the multiple virtual servers.
+6) Install: To install the project software on the remote clients.
 
-7) Install: To install the project software on the remote clients.
+7) Test and modify: Under perfect conditions, the clients will collect data and send it to the server. Troubleshooting and corrections may be required.
 
-8) Test and modify: Under perfect conditions, the clients will collect data and send it to the server. Troubleshooting and corrections may be required.
-
-9) Data analysis: Using the software Jupyter, the collected data can be reviewed and used to show desired information.
+8) Data analysis: Using the software Jupyter Notebook, the collected data can be reviewed and used to show desired information.
 
 # Detailed Instructions
 
@@ -48,7 +46,7 @@ c)	When prompted, make the username: “northendconnect”. This will make the f
 d)	Reboot and login. Note: There will be a bunch of information displayed. You should see the current IP address. 
 	Write that down so you can SSH into it later.
 
-	Type: 	sudo apt update && sudo upgrade -y
+	Type: 	sudo apt update && sudo apt upgrade -y
 
 e) 	Install SSH Server:
 
@@ -58,11 +56,11 @@ e) 	Install SSH Server:
 			sudo systemctl enable ssh	# Only needed if not already running
 			sudo systemctl start ssh	# Only needed if not already running	
 
-f)	Connect the server to the Git Hub repository. Now that SSH is established, it will be easiest to use a different computer on the network with Internet 		connectivity. This way you can cut and paste commands from this and other instructions into the server. This is quicker and avoids typos. 
+f)	Connect the server to the Git Hub repository. Now that SSH is established, it will be easiest to use a different computer on the network with Internet connectivity. This way you can cut and paste commands from this and other instructions into the server. This is quicker and avoids typos. 
 
-g)	From another computer, use SSH to access the server. I am using a computer running the Windows OS and the software "Bitvise SSH Client" 			(https://www.bitvise.com/ssh-client-download)so I can cut and paste. On a Mac, you can just use the terminal window and 					command "ssh connectin@IP-ADDRESS" # Use the password you used when installing the OS:
+g)	From another computer, use SSH to access the server. I am using a computer running the Windows OS and the software "Bitvise SSH Client" 			(https://www.bitvise.com/ssh-client-download)so I can cut and paste. On a Mac, you can just use the terminal window and command "ssh northendconnect@IP-ADDRESS" # Use the password you used when installing the OS:
 
-		sudo -s		# Move to root power or it won't connect properly!
+		sudo -s		# Move to root user power or it won't connect properly!
 
 h)	Follow these instructions and if you run into problems, check out the directions to connect the server to GitHub via SSH 
 	https://help.github.com/en/github/authenticating-to-github/about-ssh
@@ -83,7 +81,7 @@ i)	Go to your GitHub account in the web browser. Login. Go to Settings under the
 		cd /		# Go to the root directory! 
 				# This is required to put the project files in the correct location
 
-		git clone git@github.com:JoelTempleman/ConnectedMB.git
+		git clone git@github.com:InternetSocietyManitobaChapter/NorthEndConnect-Unattended_IPT.git
 		cd /NorthEndConnect-Unattended_IPT
 		chmod +x install_project.sh
 		./install_project.sh -y
