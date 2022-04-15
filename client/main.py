@@ -17,7 +17,7 @@
 # Top level variables to change depending on requirements
 VERSION="2"
 
-# TCP_IP = 'localhost'
+# TCP_IP = "192.168.1.102" #'localhost'
 # TCP_PORT=81
 # Get server info from file outside of compiled code
 
