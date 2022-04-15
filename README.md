@@ -28,6 +28,7 @@ Python PyInstaller | https://pyinstaller.readthedocs.io/en/stable/index.html
 requests
 selenium
 webdriver-manager
+python3 -m pip install -U nuitka
   
 # Preparation
 
@@ -48,14 +49,14 @@ Main and Server python files have a version setting, you will need to adjust tha
 
 # Commands & Setup
 For CIRA only test
-python -m nuitka --windows-disable-console cira.py
+python3 -m nuitka --windows-disable-console cira.py
 
 In Updater Folder  
-python -m nuitka --windows-disable-console updater.py  
+python3 -m nuitka --windows-disable-console updater.py  
 Put updater.build, updater.cmd and updater.exe in a Zip for distribution
 
 In Client Folder  
-python -m nuitka --windows-disable-console -o UPT.exe main.py  
+python3 -m nuitka --windows-disable-console -o UPT.exe main.py  
 This command will take some time to run  
 ZIP the main.build, main.cmd and UPT.exe into a ZIP file called UPT.zip
 Move the UPT.zip to the same folder as the Server.py
