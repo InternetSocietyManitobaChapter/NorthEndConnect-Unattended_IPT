@@ -1,5 +1,4 @@
 # A simple script to install everything
-sudo apt update 
 
 # Update package manager (apt-get) 
 # and install (with the yes flag `-y`)
