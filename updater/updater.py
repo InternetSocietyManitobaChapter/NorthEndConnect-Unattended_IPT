@@ -15,7 +15,7 @@
 # Supported with funding from the Internet Society Manitoba Chapter Inc. (www.internetsocietymanitoba.ca) 
 
 # Top level variables to change depending on requirements
-TCP_IP = 'localhost'
+TCP_IP = "192.168.1.102"
 TCP_PORT = 81
 BUFFER_SIZE = 1024
 
