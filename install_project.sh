@@ -32,5 +32,6 @@ cd ../CIRA
 python3 -m nuitka --windows-disable-console -o cira.exe cira.py
 zip -r cira.zip *
 
-# Run the script when the image is run
-# ["python3", "/home/server.py"]
+# Run the script to start listening for connections
+cd ../server
+python3 server.py
