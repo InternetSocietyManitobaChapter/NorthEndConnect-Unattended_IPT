@@ -49,10 +49,10 @@ Main and Server python files have a version setting, you will need to adjust tha
 
 # Commands & Setup
 For CIRA only test
-python3 -m nuitka --windows-disable-console cira.py
+python3 -m nuitka --windows-disable-console -o cira.exe cira.py
 
 In Updater Folder  
-python3 -m nuitka --windows-disable-console updater.py  
+python3 -m nuitka --windows-disable-console -o updater.exe updater.py
 Put updater.build, updater.cmd and updater.exe in a Zip for distribution
 
 In Client Folder  
