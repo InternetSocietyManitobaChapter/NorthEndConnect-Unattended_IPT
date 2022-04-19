@@ -1,9 +1,9 @@
 # Unattended Performance Test
-This program was built to be used in the North End Connect Project. This project is a partnership between Indigenous Vision for the North End (IVNE), the Internet Society of Manitoba Chapter (ISOC MB), and Computers for Schools Manitoba (C4SMB).
+This program was built to be used in the "North End Connect" Project. This project is a partnership between Indigenous Vision for the North End (IVNE), the Internet Society of Manitoba Chapter (ISOC MB), and Computers for Schools Manitoba (C4SMB).
 
-It connects the computer to the Internet Society's server, as well as remotely triggering the Canadian Internet Registration Authority (CIRA)'s Mini Performance Test (part of the Internet Performance Test (IPT) https://performance.cira.ca/ or the low bandwidth version https://performance.cira.ca/mini/ ).
+C4SMB is providing IVNE with refurbished PCs that IVNE will provide for free to residents of Winnipeg's North End community. This software connects the computer to the Internet Society's server, as well as remotely triggering the Canadian Internet Registration Authority (CIRA)'s Mini Performance Test (part of the Internet Performance Test (IPT) https://performance.cira.ca/ or the low bandwidth version https://performance.cira.ca/mini/ ). The data collected in CIRAs database will be used in the project's research sub-component.
 
-There are 4 areas within this software. "Cira.py" works by itself and all it does is silently run CIRA's IPT from a Windows 10 client computer. The other option required parts 2, 3 & 4 running on the Win 10 clients, in partnership with a Ubuntu server avaialbe somewhere on the open internet.
+There are 4 areas within this software. "Cira.py" works by itself and all it does is silently run CIRA's IPT from a Windows 10 client computer. The other option requires parts 2, 3 & 4 running on the Win 10 clients, in partnership with a Ubuntu server avaiable somewhere on the open internet.
 
   1) Cira.py is the standalone performance test, and only the performance test.  
 
