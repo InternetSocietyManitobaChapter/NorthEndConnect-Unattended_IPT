@@ -27,6 +27,11 @@ Started 1 November 2021
 
 8) Data analysis: Using the software Jupyter Notebook, the collected data can be reviewed and used to show desired information.
 
+# Requirements
+
+On the Server:
+Python 3.10 
+
 # Detailed Instructions
 
 # Part 1. 	Set up the project server (Dev Environment Only)
