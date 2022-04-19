@@ -43,7 +43,8 @@ pip3 install webdriver-manager
 # Copy the project files:
 
 # Basic Configuration Information
-Updater, Client, and Server python files have a TCP_IP and TCP_PORT that will need to be adjusted to the server that server.py resides on.  
+Updater, Client, and Server python files have a TCP_IP and TCP_PORT that will need to be adjusted to the server that server.py resides on. The server should point at the server's internel IP address or 'localhost'. The Update and Client can be the public IP or DNS name of the server.
+
 Main and Server python files have a version setting, you will need to adjust that if there are any updates required.  
 
 # Commands & Setup
