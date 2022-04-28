@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Supported with fundamental from the Internet Society Manitoba Chapter Inc. (www.internetsocietymanitoba.ca) 
+# Supported with funding from the Internet Society Manitoba Chapter Inc. (www.internetsocietymanitoba.ca) 
 
 import sys
 import logging
