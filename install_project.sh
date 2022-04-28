@@ -2,7 +2,7 @@
 
 # Update package manager (apt-get) 
 # and install (with the yes flag `-y`)
-# Python and Pip
+# Python and Pip 
 apt-get update && apt-get upgrade && apt autoremove -y
 apt-get install python3.8 -y
 apt-get install python3-pip -y
