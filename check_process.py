@@ -7,5 +7,5 @@ def check_process():
     my_pid, err = process.communicate()
     if len(my_pid.splitlines()) >0:
         print("Script Running in background")
-        sys.exit(0);
+        #sys.exit(0);
 check_process()
