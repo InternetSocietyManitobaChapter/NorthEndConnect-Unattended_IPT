@@ -17,7 +17,7 @@
 # Top level variables to change depending on requirements
 VERSION="2"
 
-TCP_IP = "192.168.1.102"
+TCP_IP = "192.168.1.101"
 TCP_PORT=81
 
 WAIT_TIME=30
