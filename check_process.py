@@ -1,5 +1,6 @@
 def check_process():
     import subprocess
+    import urllib3
     script_name = "server.py"
     cmd='pgrep -f .*python.*{}'.format(script_name)
     process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
