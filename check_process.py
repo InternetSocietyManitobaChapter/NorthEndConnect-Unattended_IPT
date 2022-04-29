@@ -10,7 +10,7 @@
         #sys.exit(0);
 #check_process()
 
-def check_script_status():
+#def check_script_status():
     import subprocess
     
 pytonProcess = subprocess.check_call("ps -ef | grep server.py",shell=True).decode()
@@ -19,4 +19,4 @@ pytonProcess = pytonProcess.split('\n')
 for process in pytonProcess:
     print(process)
 
-check_script_status()
+#check_script_status()
