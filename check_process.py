@@ -13,7 +13,7 @@
 #def check_script_status():
 import subprocess
     
-pytonProcess = subprocess.check_call("ps -ef | grep server.py",shell=True).decode()
+pytonProcess = subprocess.check_output("ps -ef | grep server.py",shell=True).decode()
 pytonProcess = pytonProcess.split('\n')
   
 for process in pytonProcess:
