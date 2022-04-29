@@ -33,5 +33,8 @@ python3 -m nuitka --windows-disable-console -o cira.exe cira.py
 zip -r cira.zip *
 
 # Run the script to start listening for connections
+
 cd ../server
-python3 server.py
+#chmod +x server.py
+#python3 server.py
+nohup python3 -u server.py > output.log &
