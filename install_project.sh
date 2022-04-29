@@ -13,7 +13,7 @@ pip3 install selenium
 pip3 install webdriver-manager
 python3 -m pip install -U nuitka
 pip3 install psutil
-pip install subprocess.run
+pip3 install subprocess.run
 
 #Compile the "main.py" python code into UPT.exe
 cd client
