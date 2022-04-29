@@ -1,7 +1,7 @@
-import psutil
-
 def checkIfProcessRunning(processName):
 
+    import psutil
+    
     #Iterate over the all the running process
     for proc in psutil.process_iter():
         try:
