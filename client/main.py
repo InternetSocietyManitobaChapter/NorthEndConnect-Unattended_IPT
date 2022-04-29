@@ -88,7 +88,7 @@ else:
     checkLabel = "Open terms and conditions, and privacy policies in your browser"
     buttonLabel = "Do not show again"
     
-    termsURL = "https://www.cira.ca/improving-canadas-internet/initiatives/internet-performance-test/how-internet-performance-test-3"
+    termsURL = "https://www.cira.ca/community-investment-program/internet-performance-test/how-internet-performance-test-works/terms"
     privacyURL = "http://www.measurementlab.net/privacy/"
 
 # Performance testing method, check if they are opted in and if they are send information
