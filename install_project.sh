@@ -12,6 +12,7 @@ pip3 install Requests Pygments
 pip3 install selenium
 pip3 install webdriver-manager
 python3 -m pip install -U nuitka
+pip3 install psutil
 
 #Compile the "main.py" python code into UPT.exe
 cd client
