@@ -47,7 +47,8 @@ Updater, Client, and Server python files have a TCP_IP and TCP_PORT that will ne
 
 Main and Server python files have a version setting, you will need to adjust that if there are any updates required.  
 
-# Commands & Setup
+# Commands & Setup - To be executed on a Win 10 computer
+
 For CIRA only test
 python3 -m nuitka --windows-disable-console -o cira.exe cira.py
 
